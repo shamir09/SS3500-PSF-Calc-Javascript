@@ -1,17 +1,17 @@
 # SS3500-PSF-Calc-Javascript
-<div style="display: block; text-align="center";> <img src="http://shamirajate.com/ss3500/assets/CGI_LOGO.jpeg" width="260" height="128"></div>
+<div style="display: block; text-align="center";> <img src="http://shamirajate.com/ss3500/assets/CGI_LOGO.jpeg" width="360" height="128"></div>
 
  READ ME FILE  |  SS3500 PRESSURE CALCULATOR
 
-### System Approval: FL18411
+### System Approval: 16-0505.04
 
 This webpage was created to facilitate the calculation of the Windload capacity the SS3500 Series.
 The SS3500 is an Impact Resistant Storefront/Fixed Window System that supports 9/16" Laminated or
 1 3/16" Laminated Insulated Glass with both PVB & SGP options.
 
-#### INPUT - the program uses 5 variables to calculate Windload.
-		 *Width            (format accepted: inches ")
-		 *Height           (format accepted: inches ")
+#### INPUT - the program uses 4 variables to calculate Windload.
+		 *Width            (format accepted: inches)
+		 *Height           (format accepted: inches)
 		 *Vertical Lites   (format accepted: integer)
 		 *Horizontal Lites (format accepted: integer)
 
@@ -26,6 +26,6 @@ double check and don't use this the only tool when checking for compliance.
 
 ### CONTACT US    |     DEVELOPERS
 Have a question or feature you'd recommend? Tell us.
-###### SHAMIR AJATE     shamir@mrglasswindows.com @shamir09
+###### SHAMIR AJATE     shamirajate@gmail.com @shamir09
 
 ### See it run live:         [SS3500 PSF Calculator ](http://www.shamirajate.com/ss3500/index.html)
