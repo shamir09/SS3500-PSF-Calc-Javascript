@@ -16,7 +16,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="themecss.css">
     <!--<link rel="stylesheet" type="text/css" href="mytheme.css">-->
-    <script type="text/javascript" src="assets/fractions.js"></script>  <!--Credit to Yudiel Curbelo for fractions script-->
     <script type="text/javascript" src="assets/SS3500-psfCalculator.js"></script>
     <script type="text/javascript" src="assets/animation.js"></script>
 
@@ -58,12 +57,6 @@
                     <input type="number" class="form-control" name="horizLitesInput" id="horizLitesInput" min="1" value="1" required autocomplete="off">
                     <span class="glyphicon glyphicon-menu-hamburger" id="horizontalLitesIcon"></span><br />
 
-                    Reinf: <select name="Reinforcement" id="Reinforcement">
-                            <option value="0">None</option>
-                            <option value="1">Steel</option>
-
-                          </select>
-                          <span class="glyphicon glyphicon-link" id="reinforcementIcon"></span>
 
             <input type="button" value="Submit" type="submit" class="contactmeboxes" id="calculate_btn" onclick="CalculatePSF.apply(this, RetrieveInput());">
             <input type="reset" value="Reset" class="contactmeboxes" id="reset_btn" onclick="ResetFields()">
@@ -77,8 +70,6 @@
 <br/>
       <div style="display: inline-block;">
 
-          <img src="assets/J1.jpg" id="J1" alt="J1 No Reinforcement">
-          <img src="assets/J1_Alum.jpg" id="J1_Alum" alt="J1 Alum Reinforcement">
           <img src="assets/M1.jpg" id="M1" alt="M1 No Reinforcement">
           <img src="assets/M2.jpg" id="M2" alt="M2 Alum Reinforcement">
           <img src="assets/warning.png" id="warningIcon" alt="Warning there's a problem">

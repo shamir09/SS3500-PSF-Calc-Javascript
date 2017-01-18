@@ -64,6 +64,7 @@ form-lbl {
         color: gray;
         opacity:.8;
         padding: 7px;
+        font-family: sans-serif;
 }
 
 #reset_btn {
