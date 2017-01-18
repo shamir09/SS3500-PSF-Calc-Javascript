@@ -50,7 +50,7 @@ function CalculatePSF(widthInputValue, heightInputValue, verticalLitesValue, hor
 var TotalWidth = widthInputValue;
 var width = widthInputValue / verticalLitesValue - 1.75;
 var height = heightInputValue;
-var psf_M1 = 0, psf_M2, psf_M3;
+var psf_M1, psf_M2, psf_M3;
 var MaxExceeded = "NOA Maximum Width per Panel at this height is ";
 
 
