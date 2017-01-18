@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" lang="en-Us">
+    <meta name="viewport" content="width=device-width, initial-scale=.8">
+
+    <title>CGI Commercial - SS3500 PSF Calculator</title>
+
+    <!--<link rel="stylesheet" type="text/css" href="mytheme.css">-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="themecss.css">
+    <!--<link rel="stylesheet" type="text/css" href="mytheme.css">-->
+    <script type="text/javascript" src="assets/fractions.js"></script>  <!--Credit to Yudiel Curbelo for fractions script-->
+    <script type="text/javascript" src="assets/SS3500-psfCalculator.js"></script>
+    <script type="text/javascript" src="assets/animation.js"></script>
+
+    <meta name="description" content="CGI Commercial" />
+
+    <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+<body>  <!-- MainPage -->
+
+<div id="bodyContainer">
+  <div id="formContainer">
+    <a href="http://cgiwindows.com//" alt="CGI Windows Official Website">
+        <img src="assets/CGI_LOGO.jpeg" id="cgiLogo" width="550" height="200px" alt="CGI Commercial Logo" />
+    </a><br/>
+    <!--                  FORM                     -->
+    <h1 class="title" id="headTitle">SS-3500<br/> PSF Calculator</h1>
+    <a href="assets/SS-3500 Impact Storefront  NOA 16-0505.04.pdf" target="_blank" id="NOA" class="hover">
+        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> NOA #16-0505.04</a><br/>
+
+        <form name="SS-3500" method="post" action="psfcalc()" id="contForm">
+               <div class="form-group" id="form-box">
+
+                    Width :
+                    <input type="number" class="form-control" name="widthInput" maxlength="6" id="widthInput" autofocus required autocomplete="off">
+                    <span class="glyphicon glyphicon-resize-horizontal" id="widthInputIcon"></span><br />
+
+                    Height:
+                    <input type="number" class="form-control" name="heightInput" maxlength="6" id="heightInput" required autocomplete="off">
+                    <span class="glyphicon glyphicon-resize-vertical" id="heighInputIcon"></span><br />
+
+                    VLites:
+                    <input type="number" class="form-control" name="vertiLitesInput" id="vertiLitesInput" min="1" value="1" required autocomplete="off">
+                      <span class="glyphicon glyphicon-pause" id="verticalLitesIcon"></span><br />
+
+                    HLites:
+                    <input type="number" class="form-control" name="horizLitesInput" id="horizLitesInput" min="1" value="1" required autocomplete="off">
+                    <span class="glyphicon glyphicon-menu-hamburger" id="horizontalLitesIcon"></span><br />
+
+                    Reinf: <select name="Reinforcement" id="Reinforcement">
+                            <option value="0">None</option>
+                            <option value="1">Steel</option>
+
+                          </select>
+                          <span class="glyphicon glyphicon-link" id="reinforcementIcon"></span>
+
+            <input type="button" value="Submit" type="submit" class="contactmeboxes" id="calculate_btn" onclick="CalculatePSF.apply(this, RetrieveInput());">
+            <input type="reset" value="Reset" class="contactmeboxes" id="reset_btn" onclick="ResetFields()">
+
+
+                    <div id="PSF_Result"></div>
+                </div>
+        </form>
+
+              <div class="PSF_Result_Div" id="PSF_Result_Div"> + / - </div>
+<br/>
+      <div style="display: inline-block;">
+
+          <img src="assets/J1.jpg" id="J1" alt="J1 No Reinforcement">
+          <img src="assets/J1_Alum.jpg" id="J1_Alum" alt="J1 Alum Reinforcement">
+          <img src="assets/M1.jpg" id="M1" alt="M1 No Reinforcement">
+          <img src="assets/M2.jpg" id="M2" alt="M2 Alum Reinforcement">
+          <img src="assets/warning.png" id="warningIcon" alt="Warning there's a problem">
+      </div>
+    </div>
+
+</body>
+</html>
