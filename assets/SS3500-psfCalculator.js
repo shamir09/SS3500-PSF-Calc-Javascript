@@ -490,13 +490,25 @@ function Reinf3() {
       function GlassSize() {
         var GlassWidth = TotalWidth - 4;
         var GlassHeight = height -4;
+
+        if (verticalLitesValue > 1) {
+            GlassWidth = width - 2.25;
+        }
         return (GlassWidth + " x " + GlassHeight)
       }
 
 console.log("====================================");
+<<<<<<< HEAD
 console.log("> Frame Size: " + TotalWidth + " x " + height + " = " + TotalWidth * height / 144 + " SQF");  // Total Square Feet
 console.log("> AVRG Width: " + width + " x " + height);
 console.log("> Glass Size: " + GlassSize());
 console.log("> No Reinforcement: " + Reinf0());  // Total Square Feet
+=======
+console.log("> Frame Size: " + TotalWidth + " x " + height + " = " + (TotalWidth * height / 144).toFixed(2) + " SQF");  // Total Square Feet
+console.log("> Center Line Width: " + width + " x " + height);
+console.log("> Glass Size: " + GlassSize());     // Calculate Glass Size
+console.log("> No Reinforcement: " + Reinf0());  // Calculate PSF for No Reinforcement
+console.log("> Reinforement 1: " + Reinf1());    // Calculate PSF for Steel Reinforcement
+>>>>>>> 32d579ba8170983c0795e115971e311192d83786
 
 }
