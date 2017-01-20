@@ -44,7 +44,28 @@ function RetrieveInput(){
   return [widthInputValue, heightInputValue, verticalLitesValue, horizontalLitesValue];
 }
 
+var SS3500 = {
+  Width: 48,
+  Height: 48,
+  RetrieveInputfunction: function(){
+          // Declaration of Variables that will be needed to Determine Pressures
+          var widthInputValue, heightInputValue, verticalLitesValue, horizontalLitesValue, MaxExceeded;
+
+          widthInputValue = document.getElementById("widthInput").value;
+          heightInputValue = document.getElementById("heightInput").value;
+          verticalLitesValue = document.getElementById("vertiLitesInput").value;
+          horizontalLitesValue = document.getElementById("horizLitesInput").value;
+
+          return [widthInputValue, heightInputValue, verticalLitesValue, horizontalLitesValue];
+        }
+//  Reinforcement0 : function(){
+  //        return this.Width + " X " + this.Height;
+    //    }
+};
+
 function CalculatePSF(widthInputValue, heightInputValue, verticalLitesValue, horizontalLitesValue) {
+
+
 
   //if (heightInputValue == undefined || heightInputValue == "") {alert("Please enter a height"); return}
 var TotalWidth = widthInputValue;
@@ -472,7 +493,7 @@ function Reinf3() {
         return (GlassWidth + " x " + GlassHeight)
       }
 
-console.log("=====================================================");
+console.log("====================================");
 console.log("> Frame Size: " + TotalWidth + " x " + height + " = " + TotalWidth * height / 144 + " SQF");  // Total Square Feet
 console.log("> AVRG Width: " + width + " x " + height);
 console.log("> Glass Size: " + GlassSize());
