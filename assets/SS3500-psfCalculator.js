@@ -45,8 +45,24 @@ function RetrieveInput(){
 }
 
 var SS3500 = {
-  width: 54,
-  height: 126,
+  width: 36,
+  height: 120,
+  verticalLitesValue: 1,
+  horizontalLitesValue: 1,
+  TotalDimension: function() {
+      return (this.width + " x " + this.height + " = " + (this.width * this.height/144).toFixed(2) + " Sqf");
+  },
+
+  GlassSize: function() {
+    let TotalWidth = this.width;
+    let GlassWidth = TotalWidth - 4;
+    let GlassHeight = this.height -4;
+
+    if (this.verticalLitesValue > 1) {
+        GlassWidth = width - 2.25;
+    }
+    return (GlassWidth + " x " + GlassHeight + " = " + (GlassWidth * GlassHeight/144).toFixed(2) + " Sqf")
+  },
   RetrieveInputfunction: function(){
           var widthInputValue, heightInputValue, verticalLitesValue, horizontalLitesValue, MaxExceeded;
 
@@ -183,7 +199,7 @@ var SS3500 = {
                                                                                         psf_M1 = "System has a max height of 144\""; YellowWarningCSS();
                                                                                       }
       return psf_M1;
-      },
+    },  //Calculate PSF with No Reinforement
   Reinforcement2: function(){
     // FULL VIEW PANELS
     var psf_M3;
@@ -323,9 +339,9 @@ var SS3500 = {
                                                                   psf_M3 = "System has a max height of 144\"";
                                                             }
     return psf_M3;
-  },
+  },   //Calculate PSF with Steel Reinforement
 
-};
+}; //End of Object SS3500
 
 function CalculatePSF(widthInputValue, heightInputValue, verticalLitesValue, horizontalLitesValue) {
 
@@ -424,23 +440,11 @@ function Reinf3() {
       }
 */
 
-
-      function GlassSize() {
-        var GlassWidth = TotalWidth - 4;
-        var GlassHeight = height -4;
-
-        if (verticalLitesValue > 1) {
-            GlassWidth = width - 2.25;
-        }
-        return (GlassWidth + " x " + GlassHeight)
-      }
-
 console.log("====================================");
-console.log("> Frame Size: " + TotalWidth + " x " + height + " = " + (TotalWidth * height / 144).toFixed(2) + " SQF");  // Total Square Feet
-console.log("> Center Line Width: " + width + " x " + height);
-console.log("> Glass Size: " + GlassSize());     // Calculate Glass Size
-console.log("> No Reinforcement: " + Reinf0());  // Calculate PSF for No Reinforcement
-console.log("> Reinforement 1: " + Reinf1());    // Calculate PSF for Steel Reinforcement
+console.log("> Frame Size: " + SS3500.TotalDimension());
+console.log("> Glass Size: " + SS3500.GlassSize());     // Calculate Glass Size
+console.log("> No Reinforcement: " + SS3500.Reinforcement0());  // Calculate PSF for No Reinforcement
+console.log("> Reinforement 1: " + SS3500.Reinforcement2());    // Calculate PSF for Steel Reinforcement
 
 
 }
