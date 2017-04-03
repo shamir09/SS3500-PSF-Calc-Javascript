@@ -21,6 +21,7 @@
 
     <meta name="description" content="CGI Commercial" />
 
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
     <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
@@ -30,7 +31,7 @@
 
 <div id="bodyContainer">
   <div id="formContainer">
-    <a href="http://cgiwindows.com//" alt="CGI Windows Official Website">
+    <a href="http://commercialcgi.com//" alt="CGI Windows Official Website">
         <img src="assets/CGI_LOGO.jpeg" id="cgiLogo" width="550" height="200px" alt="CGI Commercial Logo" />
     </a><br/>
     <!--                  FORM                     -->
@@ -50,15 +51,15 @@
                     <span class="glyphicon glyphicon-resize-vertical" id="heighInputIcon"></span><br />
 
                     VLites:
-                    <input type="number" class="form-control" name="vertiLitesInput" id="vertiLitesInput" min="1" value="1" required autocomplete="off">
+                    <input type="number" class="form-control" name="vertiLitesInput" id="verticalLitesInput" min="1" value="1" required autocomplete="off">
                       <span class="glyphicon glyphicon-pause" id="verticalLitesIcon"></span><br />
 
                     HLites:
-                    <input type="number" class="form-control" name="horizLitesInput" id="horizLitesInput" min="1" value="1" required autocomplete="off">
+                    <input type="number" class="form-control" name="horizLitesInput" id="horizontalLitesInput" min="1" value="1" required autocomplete="off">
                     <span class="glyphicon glyphicon-menu-hamburger" id="horizontalLitesIcon"></span><br />
 
 
-            <input type="button" value="Submit" type="submit" class="contactmeboxes" id="calculate_btn" onclick="CalculatePSF.apply(this, RetrieveInput());">
+            <input type="button" value="Submit" type="submit" class="contactmeboxes" id="calculate_btn" onclick="SS3500.CalculatePSF(SS3500.RetrieveInput());">
             <input type="reset" value="Reset" class="contactmeboxes" id="reset_btn" onclick="ResetFields()">
 
 

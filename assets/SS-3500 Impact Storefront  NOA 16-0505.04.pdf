@@ -4,7 +4,7 @@
 endobj
 2 0 obj<</Type/Catalog/Pages 1 0 R>>
 endobj
-3 0 obj<</CreationDate(D:20160603120841-04'00')/ModDate(D:20170201230348-05'00')/Creator(LANIER MP 5054)/Producer(LANIER MP 5054)>>
+3 0 obj<</CreationDate(D:20160603120841-04'00')/ModDate(D:20170327092113-04'00')/Creator(LANIER MP 5054)/Producer(LANIER MP 5054)>>
 endobj
 4 0 obj<</Type/XObject/Subtype/Image/Width 1704/Height 2200/BitsPerComponent 1/ColorSpace/DeviceGray/Filter/CCITTFaxDecode/DecodeParms<</Columns 1704/Rows 2200/K -1>>/Length 66297>>
 stream
@@ -4806,17 +4806,35 @@ endobj
 endobj
 99 0 obj<</Subj(Rectangle)/Type/Annot/P 73 0 R/F 4/C[1 0 0]/CreationDate(D:20161209183309-05'00')/T(Sam)/Subtype/Square/FillOpacity 0.5/BS<</W 1.5/S/S/Type/Border>>/M(D:20170201230244-05'00')/RD[0.75 0.75 0.75 0.75]/AP<</N 102 0 R>>/Rect[483.2096 49.1453 538.4365 709.5389]/NM(VAWRAISIIORZZTVS)>>
 endobj
-100 0 obj[99 0 R]
+100 0 obj[99 0 R 103 0 R 106 0 R]
 endobj
 101 0 obj<</Type/ExtGState/ca 0.5/CA 1>>
 endobj
-102 0 obj<</Type/XObject/Subtype/Form/FormType 1/BBox[483.2108 49.14536 538.4377 709.539]/Resources<</ProcSet[/PDF]/ExtGState<</BBGS 101 0 R>>>>/Matrix[1 0 0 1 -483.2096 -49.14529]/Length 65>>
+102 0 obj<</Type/XObject/Subtype/Form/FormType 1/BBox[483.2108 49.14536 538.4377 709.5391]/Resources<</ProcSet[/PDF]/ExtGState<</BBGS 101 0 R>>>>/Matrix[1 0 0 1 -483.2096 -49.14529]/Length 65>>
 stream
 /BBGS gs 1 0 0 RG 1.5 w 484.7108 50.64536 52.22693 657.3936 re S 
 endstream
 endobj
+103 0 obj<</Subj(Rectangle)/Type/Annot/P 73 0 R/F 4/C[1 0 0]/CreationDate(D:20170327085723-04'00')/T(shamir)/Subtype/Square/RD[0.75 0.75 0.75 0.75]/M(D:20170327092111-04'00')/FillOpacity 0.5/Rect[220.6068 45.81063 278.6231 706.2042]/BS<</W 1.5/S/S/Type/Border>>/AP<</N 105 0 R>>/NM(QFALDQCNKMDFPQWH)>>
+endobj
+104 0 obj<</Type/ExtGState/ca 0.5/CA 1>>
+endobj
+105 0 obj<</Type/XObject/Subtype/Form/FormType 1/BBox[220.607 45.81057 278.6232 706.2042]/Resources<</ProcSet[/PDF]/ExtGState<</BBGS 104 0 R>>>>/Matrix[1 0 0 1 -220.6068 -45.81064]/Length 64>>
+stream
+/BBGS gs 1 0 0 RG 1.5 w 222.107 47.31057 55.01624 657.3936 re S 
+endstream
+endobj
+106 0 obj<</Subj(Rectangle)/Type/Annot/P 73 0 R/F 4/C[1 0.4 0]/CreationDate(D:20170327092056-04'00')/T(shamir)/Subtype/Square/IC[1 0.4 0]/FillOpacity 0.2/CA 0.4/BS<</W 2/S/S/Type/Border>>/M(D:20170327092107-04'00')/RD[1 1 1 1]/AP<</N 108 0 R>>/Rect[220.8163 377.4306 276.1163 407.4592]/NM(HCBBKAYCPYLZVBMU)>>
+endobj
+107 0 obj<</Type/ExtGState/ca 0.2/CA 0.4>>
+endobj
+108 0 obj<</Type/XObject/Subtype/Form/FormType 1/BBox[220.8163 377.4307 276.1163 407.4593]/Resources<</ProcSet[/PDF]/ExtGState<</BBGS 107 0 R>>>>/Matrix[1 0 0 1 -220.8163 -377.4306]/Length 72>>
+stream
+/BBGS gs 1 0.4 0 RG 2 w 1 0.4 0 rg 222.8163 379.4307 51.3 26.02863 re B 
+endstream
+endobj
 xref
-0 103
+0 109
 0000000000 65535 f 
 0000000015 00000 n 
 0000000192 00000 n 
@@ -4918,9 +4936,15 @@ xref
 0001886371 00000 n 
 0001886479 00000 n 
 0001886783 00000 n 
-0001886808 00000 n 
-0001886856 00000 n 
-trailer<</Size 103/Info 3 0 R/Root 2 0 R/ID[<e0a77a6534329dfca7c90aedad91f8b5><cfc1562047b978301764b8501c1448fa>]>>
+0001886824 00000 n 
+0001886872 00000 n 
+0001887156 00000 n 
+0001887465 00000 n 
+0001887513 00000 n 
+0001887795 00000 n 
+0001888111 00000 n 
+0001888161 00000 n 
+trailer<</Size 109/Info 3 0 R/Root 2 0 R/ID[<e0a77a6534329dfca7c90aedad91f8b5><6b52adc03186b042adb52624c2890e84>]>>
 startxref
-1887139
+1888452
 %%EOF

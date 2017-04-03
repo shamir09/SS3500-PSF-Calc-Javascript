@@ -44,7 +44,7 @@ form-lbl {
     display: inline-block;
     color: darkgray;
 }
-#widthInput, #heightInput, #horizLitesInput, #vertiLitesInput, select{
+#widthInput, #heightInput, #horizontalLitesInput, #verticalLitesInput, select{
     display:inline-block;
     padding: 2px;
     width:150px;
