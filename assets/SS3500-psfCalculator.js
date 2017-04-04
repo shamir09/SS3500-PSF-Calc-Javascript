@@ -1,4 +1,4 @@
-// JavaScript source code
+//JavaScript source code
 function ResetFields() {   /////// RESET FUNCTION
     var psfResult = "+ / -";
     document.getElementById("PSF_Result_Div").innerHTML = psfResult;
@@ -48,6 +48,10 @@ SS3500 = {
        if (totalwidth == undefined || "") {  totalwidth = Number(document.getElementById("widthInput").value); }
        return this.totalwidth = totalwidth;
     },
+   centerLine: function(width) {
+       centerLine = width - 1.75;
+       return centerLine;
+   },   
 
   MaxExceeded: function(Max_Number) {
     let printout = "At this height the maximum width is " + Max_Number.toString();
@@ -64,12 +68,13 @@ TotalDimension: function() {
 
 RetrieveInput: function (){
 
-  totalwidth = this.widthInput();
+  totalwidth = this.totalwidthInput();
   height = this.heightInput();
   verticalLites = this.verticalLitesInput();
   horizontalLites = this.horizontalLitesInput();
   width = (totalwidth/verticalLites);
-  return [width, height, verticalLites, horizontalLites, totalwidth];
+  centerLine = centerLine(width)
+  return [centerLine, height, verticalLites, horizontalLites, totalwidth];
  },
 
 GlassSize: function() {
@@ -77,7 +82,7 @@ GlassSize: function() {
     let GlassWidth = TotalWidth - 4;
     let GlassHeight = this.height -4;
 
-    if (this.verticalLitesValue > 1) {
+    if (this.verticalLites > 1) {
         GlassWidth = width - 2.25;
     }
     return (GlassWidth + " x " + GlassHeight + " = " + (GlassWidth * GlassHeight/144).toFixed(2) + " Sqf")
@@ -348,7 +353,7 @@ CalculatePSF: function (width, height, verticalLites, horizontalLites) {
 
     console.log("====================================");
     console.log("> Frame Size: " + this.TotalDimension());
-    console.log("> CenterLine Width " + this.width)
+    console.log("> CenterLine Width " + this.centerLine(this.width));
     console.log("> Glass Size: " + this.GlassSize());     // Calculate Glass Size
     console.log("> Reinforcement 0: (No Reinf) " + this.Reinforcement0(this.width, this.height));  // Calculate PSF for No Reinforcement
     console.log("> Reinforcement 1: (Steel R ) " + this.Reinforcement2(this.width, this.height));    // Calculate PSF for Steel Reinforcement
