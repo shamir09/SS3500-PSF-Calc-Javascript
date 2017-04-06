@@ -28,6 +28,8 @@ SS3500 = {
   height: undefined,
   verticalLites: undefined,
   horizontalLites: undefined,
+  centerLine: undefined,
+
   widthInput: function(width) {
       if (width == undefined || "") {  width = Number(document.getElementById("widthInput").value/SS3500.verticalLitesInput()); }
       return this.width = width;
@@ -48,9 +50,8 @@ SS3500 = {
        if (totalwidth == undefined || "") {  totalwidth = Number(document.getElementById("widthInput").value); }
        return this.totalwidth = totalwidth;
     },
-   centerLine: function(width) {
-       centerLine = width - 1.75;
-       return centerLine;
+   centerLineInput: function(width) {  //Pass in a width 
+       return this.centerLine = width - 1.75;
    },   
 
   MaxExceeded: function(Max_Number) {
@@ -62,8 +63,11 @@ SS3500 = {
     document.getElementById("PSF_Result_Div").innerHTML = printout;
 
    },
-TotalDimension: function() {
-      return (this.widthInput() + " x " + this.heightInput() + " = " + (this.widthInput() * this.heightInput()/144).toFixed(2) + " Sqf");
+TotalFrameDimension: function() {
+      return (this.totalwidthInput() + " x " + this.heightInput() + " = " + (this.totalwidthInput() * this.heightInput()/144).toFixed(2) + " Sqf");
+  },
+PanelDimension: function() {
+      return (this.centerLine + " x " + this.heightInput() + " = " + (this.centerLine * this.heightInput()/144).toFixed(2) + " Sqf");
   },
 
 RetrieveInput: function (){
@@ -73,14 +77,13 @@ RetrieveInput: function (){
   verticalLites = this.verticalLitesInput();
   horizontalLites = this.horizontalLitesInput();
   width = (totalwidth/verticalLites);
-  centerLine = centerLine(width)
-  return [centerLine, height, verticalLites, horizontalLites, totalwidth];
+  centerLine = this.centerLineInput(width)
+  return [centerLine, width, height, verticalLites, horizontalLites, totalwidth];
  },
 
-GlassSize: function() {
-    let TotalWidth = this.width;
-    let GlassWidth = TotalWidth - 4;
-    let GlassHeight = this.height -4;
+GlassSize: function(centerLine, height) {
+    let GlassWidth = centerLine - 2.25;
+    let GlassHeight = height -4;
 
     if (this.verticalLites > 1) {
         GlassWidth = width - 2.25;
@@ -88,7 +91,7 @@ GlassSize: function() {
     return (GlassWidth + " x " + GlassHeight + " = " + (GlassWidth * GlassHeight/144).toFixed(2) + " Sqf")
   },
 
-Reinforcement0 : function(width, height){
+Reinforcement0 : function(centerLine, height){
     var psf_M1;
 
     var psf_36d4_36d4_M1 = "+36.4 / -36.4";
@@ -213,7 +216,7 @@ Reinforcement0 : function(width, height){
                                                                                       }
       return psf_M1;
     },  //Calculate PSF with No Reinforement
-Reinforcement2: function(width, height){     // Steel Reinforcement
+Reinforcement2: function(centerLine, height){     // Steel Reinforcement
     // FULL VIEW PANELS
     var psf_M3;
 
@@ -342,7 +345,7 @@ Reinforcement2: function(width, height){     // Steel Reinforcement
       return psf_M3;
     },
 
-CalculatePSF: function (width, height, verticalLites, horizontalLites) {
+CalculatePSF: function (centerLine, height, verticalLites, horizontalLites) {
 
     let psf_M1, psf_M2, psf_M3;
 
@@ -351,12 +354,13 @@ CalculatePSF: function (width, height, verticalLites, horizontalLites) {
     if(psf_M2 != undefined) {  document.getElementById("PSF_Result_Div").innerHTML = psf_M2;    }
     if(psf_M3 != undefined) {  document.getElementById("PSF_Result_Div").innerHTML = psf_M3;    }
 
+    SS3500.RetrieveInput();
     console.log("====================================");
-    console.log("> Frame Size: " + this.TotalDimension());
-    console.log("> CenterLine Width " + this.centerLine(this.width));
-    console.log("> Glass Size: " + this.GlassSize());     // Calculate Glass Size
-    console.log("> Reinforcement 0: (No Reinf) " + this.Reinforcement0(this.width, this.height));  // Calculate PSF for No Reinforcement
-    console.log("> Reinforcement 1: (Steel R ) " + this.Reinforcement2(this.width, this.height));    // Calculate PSF for Steel Reinforcement
+    console.log("> Total Frame Size: " + this.TotalFrameDimension());
+    console.log("> Panel Dimension " + this.PanelDimension());
+    console.log("> Glass Size: " + this.GlassSize(this.centerLine, this.height));     // Calculate Glass Size
+    console.log("> Reinforcement 0: (No Reinf) " + this.Reinforcement0(this.centerLine, this.height));  // Calculate PSF for No Reinforcement
+    console.log("> Reinforcement 1: (Steel R ) " + this.Reinforcement2(this.centerLine, this.height));    // Calculate PSF for Steel Reinforcement
 
     console.log(SS3500);
     }
